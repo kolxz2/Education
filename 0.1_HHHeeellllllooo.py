@@ -1,3 +1,5 @@
+# -> Hello
+# >> HHHeeellllllooo
 phrase = input("Enter phrase: ")
 
 
