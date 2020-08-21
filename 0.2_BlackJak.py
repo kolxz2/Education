@@ -1,14 +1,15 @@
-c = int(input("Enter three nums: "))
+cart1 = int(input("Enter nums: "))
+cart2 = int(input("Enter nums: "))
+cart3 = int(input("Enter nums: "))
 
 
- def summe(c):
-    count = cart1 + cart2 + cart3
-    if count <= 21:
-        return count
-    elif count - 10 <= 21:
-        return count - 10
+def sucaunt(cart1, cart2, cart3):
+    if sum([cart1, cart2, cart3]) <= 21:
+        return sum([cart1, cart2, cart3])
+    elif 11 in [cart1, cart2, cart3] and sum([cart1, cart2, cart3]) <= 31:
+        return sum([cart1, cart2, cart3]) - 10
     else:
-        return Bath
+        return "Brash"
 
 
-print(winLos(cart1, cart2, car3))
+print(sucaunt(cart1, cart2, cart3))

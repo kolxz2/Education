@@ -1,6 +1,6 @@
 # -> Hello
 # >> HHHeeellllllooo
-phrase = input("Enter phrase: ")
+phrase = int(input("Enter phrase: "))
 
 
 def umnozdh(phrase):
