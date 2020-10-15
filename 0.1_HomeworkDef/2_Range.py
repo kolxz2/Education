@@ -16,6 +16,10 @@ def main(num, range_low, range_high):
 
 
 if main(num, range_low, range_high):
-    print("\n{} in the range across {} and {}".format(num, range_low, range_high))
+    print(
+        "\n{} in the range across {}"
+        " and {}".format(num, range_low, range_high))
 else:
-    print("\n{} not in the range across {} and {}".format(num, range_low, range_high))
+    print(
+        "\n{} not in the range across {} "
+        "and {}".format(num, range_low, range_high))
