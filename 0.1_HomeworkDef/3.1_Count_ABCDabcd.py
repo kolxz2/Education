@@ -16,4 +16,4 @@ def main(list_my):
     print("Количество символов в верхнем регистре: ", count["upper"])
 
 
-print(main(list_my))
+main(list_my)

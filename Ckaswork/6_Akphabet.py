@@ -8,4 +8,4 @@ def mainFunkDir(letter):
         print(patterns[pattern])
 
 
-mainFunkDir(letter)
+# mainFunkDir(letter)

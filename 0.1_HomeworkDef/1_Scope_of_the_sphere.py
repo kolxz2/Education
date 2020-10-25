@@ -7,4 +7,4 @@ def scope(radius):
     return counter
 
 
-print(scope(radius))
+print("Score = ", scope(radius))
