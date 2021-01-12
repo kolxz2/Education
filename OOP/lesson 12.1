@@ -1,0 +1,27 @@
+from string import digits
+
+
+class User:
+
+    def __init__(self, login, password):
+        self.login = login
+        self.__password = password
+
+    @property
+    def password(self):
+        return self.__password
+
+    @staticmethod
+    def is_income_number(password):
+        for digit in digits:
+            pass
+
+    @password.setter
+    def password(self, value):
+        if not isinstance(value, str):
+            raise TypeError("Пароль должен быть строкой")
+        if len(value) < 4:
+            raise TypeError("Длина палоя слишком маленькая ")
+        if len(value) > 12:
+            raise TypeError("Длина палоя слишком ,большая ")
+        self.__password = value
