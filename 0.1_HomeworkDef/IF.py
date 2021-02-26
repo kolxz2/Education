@@ -1,3 +1,17 @@
+pi = 3.14
+n = input("Введите значение радиуса ")
 
-if True: i = 1
-print(i)
+
+def hren(n):
+    try:
+        int(n)
+        return True
+    except ValueError:
+        return False
+
+
+if hren(n):
+    fom_c = 4/3*pi*int(n)
+    print(fom_c)
+else:
+    print("Not True")
