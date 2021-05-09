@@ -20,4 +20,6 @@ class Point:
 pt = Point()
 pt2 = Point()
 Point.count = 10
-print(pt.count,pt2.getCount())
+# без указания статического метода в Point в  скобочках надо указать любой параметр
+Point.getCount()
+print(pt.count ,pt2.getCount())
