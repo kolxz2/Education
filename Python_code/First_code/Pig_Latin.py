@@ -1,6 +1,6 @@
 from string import ascii_letters
 
-userString = 'dfdasdf'
+userString = input('Enter your world')
 
 
 # Проверяем что пользователь ввёл толко одно слово и это слово на латинском
