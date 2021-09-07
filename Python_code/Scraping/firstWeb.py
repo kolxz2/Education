@@ -8,8 +8,9 @@ def parser(url):
     api = requests.get(url)
     tree = lxml.html.document_fromstring(api.text)
     text_original = tree.xpath('//*[@id="click_area"]/div//*[@class="original"]/text()')
+    text_translate = tree.xpath('//*[@id="click_area"]/div//*[@class="translate"]/text()')
     for i in range(len(text_original)):
-        print(text_original[i])
+        print(text_original[i], text_translate[i])
 
 
 def main():
