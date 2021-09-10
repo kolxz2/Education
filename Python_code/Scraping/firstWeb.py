@@ -9,7 +9,7 @@ from requests import Response
 
 def parser(url):
     try:
-        # TODO Change SSL  Fedora
+        # TODO Исправить SSL на  Fedora
         ran = requests.get(url,  verify=False)
         ran.raise_for_status()
     except requests.exceptions.HTTPError as err:
