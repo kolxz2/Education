@@ -1,12 +1,20 @@
-import requests # для гет запрсов http
+import requests  # для гет запрсов http
+from PIL.XVThumbImagePlugin import r
 from lxml import etree
 import lxml.html
 import csv
+import time
+from requests import Response
+# TOdDO: Исправить доступ SSL на Fedora
 
 
 def parser(url):
-    api = requests.get(url)
-    tree = lxml.html.document_fromstring(api.text)
+    try:
+        ran = requests.get(url,  verify=False)
+        ran.raise_for_status()
+    except requests.exceptions.HTTPError as err:
+        raise SystemExit(err)
+    tree = lxml.html.document_fromstring(ran.text)
     text_original = tree.xpath('//*[@id="click_area"]/div//*[@class="original"]/text()')
     text_translate = tree.xpath('//*[@id="click_area"]/div//*[@class="translate"]/text()')
     for i in range(len(text_original)):
@@ -14,7 +22,7 @@ def parser(url):
 
 
 def main():
-    parser("https://www.amalgama-lab.com/songs/t/tones_and_i/dance_monkey.html")
+    parser('http://www.amalgama-lab.com/songs/t/tones_and_i/dance_monkey.html')
 
 
 if __name__ == "__main__":
