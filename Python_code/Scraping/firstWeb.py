@@ -5,11 +5,11 @@ import lxml.html
 import csv
 import time
 from requests import Response
-# TOdDO: Исправить доступ SSL на Fedora
 
 
 def parser(url):
     try:
+        # TODO Change SSL  Fedora
         ran = requests.get(url,  verify=False)
         ran.raise_for_status()
     except requests.exceptions.HTTPError as err:
