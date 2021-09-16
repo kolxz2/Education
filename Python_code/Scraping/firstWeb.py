@@ -11,7 +11,7 @@ def parser(url):
     try:
         # TODO Исправить SSL на  Fedora
         ran = requests.get(url,  verify=False)
-        ran.raise_for_status()
+        print(ran.status_code())
     except requests.exceptions.HTTPError as err:
         raise SystemExit(err)
     tree = lxml.html.document_fromstring(ran.text)
