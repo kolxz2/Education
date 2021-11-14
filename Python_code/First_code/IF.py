@@ -19,7 +19,8 @@ def last_survivors(string):
     string = ''.join(mass + finish)
     nevly = mass + finish
     for i, y in nevly, len(nevly) - 1:
-        if i in nevly
+        if i in nevly:
+            pass
     return string
 
 

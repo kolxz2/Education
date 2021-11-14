@@ -1,5 +1,5 @@
 import requests  # для гет запрсов http
-from PIL.XVThumbImagePlugin import r
+# from PIL.XVThumbImagePlugin import r
 from lxml import etree
 import lxml.html
 import csv
